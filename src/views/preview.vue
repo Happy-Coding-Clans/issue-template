@@ -37,7 +37,7 @@ export default {
                 "browserType",
                 "systemType",
                 "reproductionLink",
-                "stepToReproduce",
+                "reproductionStep",
                 "expectedResult",
                 "actualResult",
                 // 补充
