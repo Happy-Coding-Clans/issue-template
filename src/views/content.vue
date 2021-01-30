@@ -108,7 +108,7 @@
                                     </el-option>
                                 </el-select>
                             </el-form-item>
-                            <div class="desc">
+                            <div class="item-desc">
                                 {{ tLabel["vueVersionDesc"] }}
                             </div>
                         </el-col>
@@ -125,7 +125,7 @@
                                     v-model="ruleForm.browserType"
                                 ></el-input>
                             </el-form-item>
-                            <div class="desc">
+                            <div class="item-desc">
                                 {{ tLabel["browserTypeDesc"] }}
                             </div>
                         </el-col>
@@ -139,7 +139,7 @@
                                     v-model="ruleForm.systemType"
                                 ></el-input>
                             </el-form-item>
-                            <div class="desc">
+                            <div class="item-desc">
                                 {{ tLabel["systemTypedesc"] }}
                             </div>
                         </el-col>
@@ -155,7 +155,7 @@
                                 <el-input v-model="ruleForm.reproductionLink">
                                 </el-input>
                             </el-form-item>
-                            <div class="desc">
+                            <div class="item-desc">
                                 <p v-html="tLabel['reproductionLinkDesc1']" />
                                 <p v-html="tLabel['reproductionLinkDesc2']" />
                                 <p v-html="tLabel['reproductionLinkDesc3']" />
@@ -176,7 +176,7 @@
                         </el-input>
                     </el-form-item>
                     <div
-                        class="desc"
+                        class="item-desc"
                         v-html="tLabel['reproductionStepdesc']"
                     ></div>
 
@@ -235,7 +235,10 @@
                         >
                         </el-input>
                     </el-form-item>
-                    <div class="desc" v-html="tLabel['solutionDesc']"></div>
+                    <div
+                        class="item-desc"
+                        v-html="tLabel['solutionDesc']"
+                    ></div>
 
                     <el-form-item
                         v-if="isFeature"
@@ -249,7 +252,10 @@
                         >
                         </el-input>
                     </el-form-item>
-                    <div class="desc" v-html="tLabel['solutionApiDesc']"></div>
+                    <div
+                        class="item-desc"
+                        v-html="tLabel['solutionApiDesc']"
+                    ></div>
                 </div>
                 <!-- is feature form end -->
 
@@ -555,7 +561,7 @@ export default {
 .el-form-item,
 .el-row {
     &:not(:first-child) {
-        margin-top: 20px;
+        margin-top: 25px;
     }
     margin-bottom: 5px;
 }
@@ -571,7 +577,8 @@ export default {
         margin-top: 25px;
         border-radius: 4px;
 
-        .desc {
+        .item-desc {
+            margin-top: 20px;
             line-height: 1;
             font-size: 14px;
             color: #999;
