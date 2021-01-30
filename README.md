@@ -1,2 +1,2 @@
-# issue-template
-issue template
+# issue-template-generater
+issue template-generater
