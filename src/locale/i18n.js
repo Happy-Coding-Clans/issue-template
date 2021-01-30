@@ -21,7 +21,7 @@ export default {
             >.
             `,
             reproductionLinkDesc2: `2、The <a target='blank' href="https://codepen.io/">CodePen</a> template and <a target='blank' href="https://codesandbox.io/"
-            >CodeSandbox</a> template of vue-easytable are provided for you.
+            >CodeSandbox</a> template of <a target='blank' href="https://github.com/Happy-Coding-Clans/vue-easytable">vue-easytable</a> are provided for you.
             `,
             reproductionLinkDesc3:
                 "Please do not just fill in a random link. We will close your issue if you do that.",
@@ -91,7 +91,7 @@ export default {
                 >CodeSandbox</a
             >
             链接`,
-            reproductionLinkDesc2: ` 2、此处为你提供了 vue-easytable的
+            reproductionLinkDesc2: ` 2、此处为你提供了 <a target='blank' href="https://github.com/Happy-Coding-Clans/vue-easytable">vue-easytable</a> 的
             <a target='blank' href="https://codepen.io/">CodePen</a>
             模板 和
             <a target='blank' href="https://codesandbox.io/"
