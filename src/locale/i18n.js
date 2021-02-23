@@ -14,13 +14,11 @@ export default {
             systemTypedesc: "like: Windows",
             reproductionLink: "Reproduction url",
             reproductionLinkDesc1: `1、Please provide a link by forking
-            <a target='blank' href="https://codepen.io/">CodePen</a>
-            or
             <a target='blank' href="https://codesandbox.io/"
                 >CodeSandbox</a
-            >.
+            >. (codepen or jsfiddle are not recommended. They are not friendly to JSX support.)
             `,
-            reproductionLinkDesc2: `2、The <a target='blank' href="https://codepen.io/huangsw/pen/LYbEGzz?editors=0010">CodePen</a> template of <a target='blank' href="https://github.com/Happy-Coding-Clans/vue-easytable">vue-easytable</a> are provided for you.
+            reproductionLinkDesc2: `2、The <a target='blank' href="https://codesandbox.io/s/vue-easytable-template-yg2iu">CodeSandBox</a> template of <a target='blank' href="https://github.com/Happy-Coding-Clans/vue-easytable">vue-easytable</a> are provided for you.
             `,
             reproductionLinkDesc3:
                 "3、Please do not just fill in a random link. We will close your issue if you do that.",
@@ -84,15 +82,13 @@ export default {
             systemTypedesc: "例如： Windows",
             reproductionLink: "重现链接",
             reproductionLinkDesc1: `1、请提供一个尽可能精简的
-            <a target='blank' href="https://codepen.io/">CodePen</a>
-            或者
             <a target='blank' href="https://codesandbox.io/"
                 >CodeSandbox</a
             >
             链接`,
             reproductionLinkDesc2: ` 2、此处为你提供了 <a target='blank' href="https://github.com/Happy-Coding-Clans/vue-easytable">vue-easytable</a> 的
-            <a target='blank' href="https://codepen.io/huangsw/pen/LYbEGzz?editors=0010">CodePen</a>
-            模板`,
+            <a target='blank' href="https://codesandbox.io/s/vue-easytable-template-yg2iu">CodeSandBox</a>
+            模板。（不推荐使用CodePen或者jsfiddle，他们对 jsx 支持不够友好）`,
             reproductionLinkDesc3:
                 "3、请不要乱填一个链接，这会导致你的 issue 被直接关闭",
             reproductionStep: "重现步骤",
