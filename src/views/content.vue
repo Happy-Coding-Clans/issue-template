@@ -538,7 +538,7 @@ export default {
             const versions = Object.keys(data.versions);
 
             this.vueVersions = versions.filter(v => {
-                return v.indexOf("3.0.") === -1;
+                return !v.startsWith("3.");
             });
 
             this.ruleForm.vueVersion = this.vueVersions[0];
