@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="header-wrapper">
-            <span class="item logo">Issue Template Generater1</span>
+            <span class="item logo">Issue Template Generater</span>
             <span
                 @click="langChang(item)"
                 :class="[
