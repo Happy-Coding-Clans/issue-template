@@ -94,6 +94,16 @@
                                 :label="tLabel['vueVersion']"
                                 prop="vueVersion"
                             >
+                                <el-input
+                                    v-model="ruleForm.vueVersion"
+                                ></el-input>
+                            </el-form-item>
+                            <!--  -->
+                            <!-- <el-form-item
+                                v-if="isBug"
+                                :label="tLabel['vueVersion']"
+                                prop="vueVersion"
+                            >
                                 <el-select
                                     style="width:100%"
                                     filterable
@@ -107,7 +117,7 @@
                                     >
                                     </el-option>
                                 </el-select>
-                            </el-form-item>
+                            </el-form-item> -->
                             <div class="item-desc">
                                 {{ tLabel["vueVersionDesc"] }}
                             </div>
@@ -291,8 +301,9 @@ export default {
         return {
             dialogVisible: false,
             versionApi: {
-                repositoryVersion: "https://registry.npm.taobao.org",
-                vueVersion: "https://registry.npm.taobao.org/vue"
+                repositoryVersion:
+                    "https://api.github.com/repos/Happy-Coding-Clans/vue-easytable/releases?per_page=100"
+                //vueVersion: "http://registry.npm.taobao.org/vue"
             },
             repositoryOptions: [
                 {
@@ -302,7 +313,7 @@ export default {
             ],
             // vue-easytable versions
             repositoryVersions: [],
-            vueVersions: [],
+            //vueVersions: [],
             ruleForm: {
                 /*  repositoryType: "vue-easytable",
                 issueType: "Bug",
@@ -527,22 +538,22 @@ export default {
         }, */
 
         async fetchRepositoryVersions() {
-            const apiUrl = `${this.versionApi.repositoryVersion}/${this.ruleForm.repositoryType}`;
-            const { data } = await axios.get(apiUrl);
-            this.repositoryVersions = Object.keys(data.versions);
+            //const apiUrl = `${this.versionApi.repositoryVersion}/${this.ruleForm.repositoryType}`;
+            const { data } = await axios.get(this.versionApi.repositoryVersion);
+            this.repositoryVersions = data.map(item => item.name); // Object.keys(data.versions);
 
             this.ruleForm.repositoryVersion = this.repositoryVersions[0];
-        },
-        async fetchVueVersions() {
-            const { data } = await axios.get(this.versionApi.vueVersion);
-            const versions = Object.keys(data.versions);
-
-            this.vueVersions = versions.filter(v => {
-                return !v.startsWith("3.");
-            });
-
-            this.ruleForm.vueVersion = this.vueVersions[0];
         }
+        // async fetchVueVersions() {
+        //     const { data } = await axios.get(this.versionApi.vueVersion);
+        //     const versions = Object.keys(data.versions);
+
+        //     this.vueVersions = versions.filter(v => {
+        //         return !v.startsWith("3.");
+        //     });
+
+        //     this.ruleForm.vueVersion = this.vueVersions[0];
+        // }
     },
     created() {
         this.ruleForm = Object.assign(
@@ -553,7 +564,7 @@ export default {
         );
 
         this.fetchRepositoryVersions();
-        this.fetchVueVersions();
+        //this.fetchVueVersions();
     }
 };
 </script>
